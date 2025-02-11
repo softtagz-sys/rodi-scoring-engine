@@ -3,3 +3,5 @@ spacy
 transformers
 torch
 phunspell
+ipywidgets
+matplotlib
