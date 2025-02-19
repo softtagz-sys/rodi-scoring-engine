@@ -1,7 +1,10 @@
-fastapi~=0.115.8
-spacy
+fastapi
+uvicorn
 transformers
 torch
+spacy
 phunspell
-ipywidgets
-matplotlib
+pydantic
+pytest
+python-dotenv
+pydantic_settings
