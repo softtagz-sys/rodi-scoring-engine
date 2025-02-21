@@ -2,6 +2,7 @@ import string
 import torch
 from app.dependencies import nlp, tokenizer, bertje_model, spell_checker
 
+
 def lemmatize(text):
     return " ".join([token.lemma_ for token in nlp(text)])
 
@@ -21,6 +22,9 @@ def semantic_similarity(model_text, student_text):
     return torch.nn.functional.cosine_similarity(model_emb, student_emb).item()
 
 def score_answer(model_answer, student_answer, keywords):
+    if not model_answer or not student_answer:
+        raise ValueError("Empty answers not allowed")
+
     lemmatized_model = lemmatize(model_answer)
     lemmatized_student = lemmatize(student_answer)
 

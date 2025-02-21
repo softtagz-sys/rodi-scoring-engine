@@ -1,6 +1,21 @@
-# Test your FastAPI endpoints
+### Test scoring
+POST http://127.0.0.1:8000/scoring
+Content-Type: application/json
 
-GET http://127.0.0.1:8000/
-Accept: application/json
+{
+    "model_answer": "Inflatie is het stijgen van prijzen.",
+    "student_answer": "Prijzen stijgen door inflatie.",
+    "keywords": ["inflatie", "prijzen"]
+}
 
+
+### Test scoring empty request
+POST http://127.0.0.1:8000/scoring
+Content-Type: application/json
+
+{
+    "model_answer": "",
+    "student_answer": "",
+    "keywords": []
+}
 
