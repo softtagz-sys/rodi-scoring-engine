@@ -5,7 +5,8 @@ Content-Type: application/json
 {
     "model_answer": "Inflatie is het stijgen van prijzen.",
     "student_answer": "Prijzen stijgen door inflatie.",
-    "keywords": ["inflatie", "prijzen"]
+    "keywords": ["inflatie", "prijzen"],
+    "correct_spelling": true
 }
 
 
